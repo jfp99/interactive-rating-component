@@ -1,0 +1,172 @@
+                                    /* MINIMAL RESET BASIC STYLES IN CSS */
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+$primary-color: hsl(25, 97%, 53%);
+$white: hsl(0, 0%, 100%);
+$light-grey: hsl(217, 12%, 63%);
+$medium-grey: hsl(216, 12%, 54%);
+$dark-blue: hsl(213, 19%, 18%);
+$very-dark-blue: hsl(216, 12%, 8%);
+$font: 'Overpass', sans-serif;
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body {
+    @include flex-center;
+    min-height: 100vh;
+    font-family: $font;
+    background-color: $very-dark-blue;
+    margin:0;
+    padding:0;
+    color: $white;
+    padding: 1.5rem;
+}
+// Card container
+.card-container {
+    position: relative;
+    width: 100%;
+    max-width: 412px;
+}
+// Shared card styles
+
+.card {
+    background: linear-gradient(to bottom, $dark-blue, darken($dark-blue, 5%));
+    border-radius: 1.5rem;
+    padding: 2rem;
+    width: 100%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+
+    &.rating-state {
+        display: block;
+
+        &.active {
+            display: block;
+        }
+        &:not(.active) {
+            display: none;
+        }
+    }
+
+    &.thank-you-state {
+        display: none;
+        text-align: center;
+
+        &.active {
+            display: block;
+        }
+    }
+}
+
+// Rating state specific styles
+.star-icon {
+    background-color: lighten($dark-blue, 5%);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    @include flex-center;
+    margin-bottom: 2rem;
+}
+
+.card-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: $white;
+}
+
+.card-description {
+    color: $light-grey;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    margin-bottom: 1.75rem;
+}
+
+.rating-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+
+    .rating-btn {
+        background-color: lighten($dark-blue, 5%);
+        color: $medium-grey;
+        border: none;
+        border-radius:  50%;
+        width: 3.2rem;
+        height: 3.2rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover {
+            background-color: $primary-color;
+            color: $white;
+        }
+
+        &:focus {
+            background-color: $light-grey;
+            color: white;
+        }
+
+        &:active {
+            background-color: $light-grey;
+            color: white;
+        }
+    }
+}
+
+
+// Submit button
+.submit-btn {
+    background-color: $primary-color;
+    color: $white;
+    border: none;
+    border-radius: 2rem;
+    width: 100%;
+    padding: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+        background-color: $white;
+        color: $primary-color;
+    }
+}
+
+
+//Thank you state specific styles
+.illustration {
+    margin-bottom: 2rem;
+}
+
+.selection-result {
+    background-color: lighten($dark-blue, 5%);
+    color: $primary-color;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-size: 0.9375rem;
+}
+
+.thank-you-title {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+thank-you-message {
+    color: $light-grey;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+}

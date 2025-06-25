@@ -5,33 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./styles.css" >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script src="app.js" defer></script>
   <title>Frontend Mentor | Interactive rating component</title>
 </head>
 <body>
 
   <!-- Rating state start -->
+  <main class="card-container">
 
-  How did we do?
+    <div class="card rating-state active">
+      <div class="star-icon">
+        <img class="card-image" src="./images/icon-star.svg" alt="image picture" >
+      </div>
+      <h1 class="card-title">How did we do?</h1>
+      <p class="card-description">
+          Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!
+      </p>
+        
+      <div class="rating-buttons">
+        <button type="button" class="rating-btn" data-rating="1">1</button>
+        <button type="button" class="rating-btn" data-rating="2">2</button>
+        <button type="button" class="rating-btn" data-rating="3">3</button>
+        <button type="button" class="rating-btn" data-rating="4">4</button>
+        <button type="button" class="rating-btn" data-rating="5">5</button>
+      </div>
+        
+      <button type="submit" class="submit-btn" id="submit-btn">SUBMIT</button>
+    </div>
 
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
+    <!-- Thank You State -->
+    <div class="card thank-you-state">
+      <div class="illustration">
+        <img src="images/illustration-thank-you.svg" alt="Thx illustration">
+      </div>
+      <div class="selection-result">
+        <p>You selected <span id="selected-rating">4</span> out of 5</p>
+      </div>
+      <h2 class="thank-you-title">Thank you!</h2>
+      <p class="thank-you-message">
+      We appreciate you taking the time to give a rating. If you ever need more support, 
+        don’t hesitate to get in touch!
+      </p>
+    </div>
 
-  1 2 3 4 5
+  </main>
 
-  Submit
-
-  <!-- Rating state end -->
-
-  <!-- Thank you state start -->
-
-  You selected <!-- Add rating here --> out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
-  <!-- Thank you state end -->
 </body>
 </html>

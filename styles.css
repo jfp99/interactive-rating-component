@@ -1,0 +1,147 @@
+/* MINIMAL RESET BASIC STYLES IN CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Overpass", sans-serif;
+  background-color: hsl(216, 12%, 8%);
+  margin: 0;
+  padding: 0;
+  color: hsl(0, 0%, 100%);
+  padding: 1.5rem;
+}
+
+.card-container {
+  position: relative;
+  width: 100%;
+  max-width: 412px;
+}
+
+.card {
+  background: linear-gradient(to bottom, hsl(213, 19%, 18%), #1b2127);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  width: 100%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+.card.rating-state {
+  display: block;
+}
+.card.rating-state.active {
+  display: block;
+}
+.card.rating-state:not(.active) {
+  display: none;
+}
+.card.thank-you-state {
+  display: none;
+  text-align: center;
+}
+.card.thank-you-state.active {
+  display: block;
+}
+
+.star-icon {
+  background-color: #303a46;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.card-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: hsl(0, 0%, 100%);
+}
+
+.card-description {
+  color: hsl(217, 12%, 63%);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  margin-bottom: 1.75rem;
+}
+
+.rating-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.rating-buttons .rating-btn {
+  background-color: #303a46;
+  color: hsl(216, 12%, 54%);
+  border: none;
+  border-radius: 50%;
+  width: 3.2rem;
+  height: 3.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.rating-buttons .rating-btn:hover {
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+}
+.rating-buttons .rating-btn:focus {
+  background-color: hsl(217, 12%, 63%);
+  color: white;
+}
+.rating-buttons .rating-btn:active {
+  background-color: hsl(217, 12%, 63%);
+  color: white;
+}
+
+.submit-btn {
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 2rem;
+  width: 100%;
+  padding: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.submit-btn:hover {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(25, 97%, 53%);
+}
+
+.illustration {
+  margin-bottom: 2rem;
+}
+
+.selection-result {
+  background-color: #303a46;
+  color: hsl(25, 97%, 53%);
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  margin-bottom: 2rem;
+  font-size: 0.9375rem;
+}
+
+.thank-you-title {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+thank-you-message {
+  color: hsl(217, 12%, 63%);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}/*# sourceMappingURL=styles.css.map */
